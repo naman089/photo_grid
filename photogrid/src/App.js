@@ -25,7 +25,7 @@ const NavigationBar = ({ onPrevious, onNext }) => (
 
 function App() {
   const [imageCount, setImageCount] = useState(1);
-  const [loadedImages, setLoadedImages] = useState(30); // Number of images currently loaded
+  const [loadedImages, setLoadedImages] = useState(30); 
   const [fullViewVisible, setFullViewVisible] = useState(false);
 
   const openFullView = (imageNumber) => {
@@ -93,9 +93,9 @@ function App() {
 
   const loadMoreImages = () => {
     if (loadedImages <= 30) {
-      setLoadedImages(loadedImages + 30); // Load 10 more images
+      setLoadedImages(loadedImages + 30); 
     } else {
-      // Introduce a delay of 1 second (1000 milliseconds) after displaying the initial 30 images
+      
       setTimeout(() => {
         setLoadedImages(loadedImages + 10);
       }, 1000);
